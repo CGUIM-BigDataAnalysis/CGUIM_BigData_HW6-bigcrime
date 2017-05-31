@@ -18,25 +18,68 @@ output: github_document
 - 期末專題分析規劃與假設 (`10pt`)
 
 ## 分析議題背景
-背景介紹背景介紹
+自古以來，景氣好與壞與國家治安有極大的關係，甚至得以毀掉一個國家。例如明朝末年的大旱災導致農民無法耕種維生，加上官吏的貪腐，斂取民間的財富，導致農民揭竿而起成了流寇，大肆搶奪、劫掠，使官兵疲於奔命，最終攻陷北京，滅亡大明。因此從古今的歷史，犯罪率的關係早已在深植大眾心理。經濟景況不好，社會的治安就會惡化，這是大眾心中的鐵律。然，在這個講究數據與科學的時代，這個鐵律是不是早已生了鏽？
 
 ## 分析動機
-分析動機分析動機
+
+饑寒真的起盜心嗎？
 
 ## 使用資料
-說明使用資料們
+
+內政部警政署受(處)理刑事案件破獲件數：
+民國89年至105年各縣市刑事案件的破獲案件數。
+由於資料數量龐大，先以台北市做分析。
+
+主計處平均每戶(人)可支配所得--按區域別分：
+民國69年至104年各地區每戶(人)的可支配所得。
 
 載入使用資料們
 ```{r}
-#這是R Code Chunk
+library(readr)
+avg_money_house_66_99 <- read_csv("~/RCourse/RLectures/big_crime/data/平均每戶69-99可支配所得.csv")
+avg_money_person_66_99 <- read_csv("~/RCourse/RLectures/big_crime/data/平均每人69-99可支配所得.csv")
+avg_money_house_100_104 <- read_csv("~/RCourse/RLectures/big_crime/data/平均每戶100-104可支配所得.csv")
+avg_money_person_100_104 <- read_csv("~/RCourse/RLectures/big_crime/data/平均每人100-104可支配所得.csv")
+
+crime_0_taipei <-read_delim("~/RCourse/RLectures/big_crime/data/臺北市-0.tsv", "\t", escape_double = FALSE, trim_ws = TRUE)
+crime_1_taipei <-read_delim("~/RCourse/RLectures/big_crime/data/臺北市-1.tsv", "\t", escape_double = FALSE, trim_ws = TRUE)
+crime_2_taipei <-read_delim("~/RCourse/RLectures/big_crime/data/臺北市-2.tsv", "\t", escape_double = FALSE, trim_ws = TRUE)
+crime_3_taipei <-read_delim("~/RCourse/RLectures/big_crime/data/臺北市-3.tsv", "\t", escape_double = FALSE, trim_ws = TRUE)
+crime_4_taipei <-read_delim("~/RCourse/RLectures/big_crime/data/臺北市-4.tsv", "\t", escape_double = FALSE, trim_ws = TRUE)
+crime_5_taipei <-read_delim("~/RCourse/RLectures/big_crime/data/臺北市-5.tsv", "\t", escape_double = FALSE, trim_ws = TRUE)
+crime_6_taipei <-read_delim("~/RCourse/RLectures/big_crime/data/臺北市-6.tsv", "\t", escape_double = FALSE, trim_ws = TRUE)
 ```
 
 ## 資料處理與清洗
-說明處理資料的步驟
+0. 寫python爬蟲爬下資料
+1. 從犯罪資料中取出以年份做為統計而非月份的資料
+2. 將台北市的每戶(人)平均所得資料從資料表取出
+3. 
 
 處理資料
 ```{r}
-#這是R Code Chunk
+crime_0_taipei <- crime_0_taipei[seq(from=1, to=221, by=13),]
+crime_1_taipei <- crime_1_taipei[seq(from=1, to=221, by=13),]
+crime_2_taipei <- crime_2_taipei[seq(from=1, to=221, by=13),]
+crime_3_taipei <- crime_3_taipei[seq(from=1, to=221, by=13),]
+crime_4_taipei <- crime_4_taipei[seq(from=1, to=221, by=13),]
+crime_5_taipei <- crime_5_taipei[seq(from=1, to=221, by=13),]
+crime_6_taipei <- crime_6_taipei[seq(from=1, to=221, by=13),]
+crime_taipei   <- merge(crime_0_taipei, crime_1_taipei, by='時間')
+crime_taipei   <- merge(crime_taipei, crime_2_taipei, by='時間')
+crime_taipei   <- merge(crime_taipei, crime_3_taipei, by='時間')
+crime_taipei   <- merge(crime_taipei, crime_4_taipei, by='時間')
+crime_taipei   <- merge(crime_taipei, crime_5_taipei, by='時間')
+crime_taipei   <- merge(crime_taipei, crime_6_taipei, by='時間')
+crime_taipei$時間<- as.numeric(crime_taipei$時間)
+
+knitr::kable(crime_taipei)
+
+money_avg_taipei_person <- rbind(avg_money_person_66_99[c('年別', '臺北市')], avg_money_person_100_104[c('年別', '臺北市')])
+money_avg_taipei_house  <- rbind(avg_money_house_66_99[c('年別', '臺北市')],  avg_money_house_100_104[c('年別', '臺北市')])
+
+knitr::kable(money_avg_taipei_house)
+knitr::kable(money_avg_taipei_person)
 ```
 
 ## 探索式資料分析
