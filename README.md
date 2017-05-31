@@ -211,6 +211,7 @@ crime_6_taipei <-read_delim("~/RCourse/RLectures/big_crime/data/臺北市-6.tsv"
 1.  寫python爬蟲爬下資料
 2.  從犯罪資料中取出以年份做為統計而非月份的資料
 3.  將台北市的每戶(人)平均所得資料從資料表取出
+4.  選取年度的交集做
 
 處理資料
 
@@ -343,14 +344,44 @@ knitr::kable(money_avg_taipei_person)
 |  103 | 412973.00 |
 |  104 | 426633.00 |
 
+``` r
+library(dplyr)
+```
+
+    ## Warning: package 'dplyr' was built under R version 3.2.5
+
+    ## 
+    ## Attaching package: 'dplyr'
+
+    ## The following objects are masked from 'package:stats':
+    ## 
+    ##     filter, lag
+
+    ## The following objects are masked from 'package:base':
+    ## 
+    ##     intersect, setdiff, setequal, union
+
+``` r
+taipei_avg_person_money_crime <- inner_join(money_avg_taipei_person, crime_taipei, by=c('年別' ='時間'))
+taipei_avg_house_money_crime  <- inner_join(money_avg_taipei_house, crime_taipei, by=c('年別' ='時間'))
+```
+
 探索式資料分析
 --------------
 
 圖文並茂圖文並茂
 
 ``` r
-#這是R Code Chunk
+library(ggplot2)
 ```
+
+    ## Warning: package 'ggplot2' was built under R version 3.2.5
+
+``` r
+ggplot(taipei_avg_house_money_crime, aes(x=汽車竊盜, y=臺北市)) + geom_point() + geom_text(aes(label=年別), hjust=-0.2, vjust=1.2)
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
 期末專題分析規劃
 ----------------
