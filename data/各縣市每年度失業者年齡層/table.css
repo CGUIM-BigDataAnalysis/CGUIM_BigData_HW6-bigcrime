@@ -1,0 +1,333 @@
+.title1 {
+        font-family: "新細明體";
+        font-size: 15px;
+        font-weight: bold;
+        color: #333333;
+}
+.content {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: #333333;
+}
+.unit {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        color: #333333;
+}
+.head {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: #333333;
+}
+.table01 {
+        font: 12px "新細明體";
+        color: #0066ff;
+        text-decoration: none;
+        background: #C9BDA7;
+        border-top: 1px solid #8B7C5F;
+        border-bottom: 1px solid #8B7C5F;
+        border-right: 1px solid #F0E4DD;
+
+}
+.table02 {
+        font: 12px "新細明體";
+        color: #3A3A3A;
+        text-decoration: none;
+        background: #F4EFEC;
+}
+.table03 {
+        font: 12px/20px "新細明體";
+        color: #3A3A3A;
+        text-decoration: none;
+        border-bottom: 1px dotted #CCCCCC;
+        height: 30px;
+        background: #FFFFFF;
+
+}
+a.td01:link {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: #333333;
+}
+a.td01:visited {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: #333333;
+}
+a.td01:hover {
+        font-family: "Arial", "Helvetica", "sans-serif";
+        font-size: 12px;
+        color: #22325B;
+}
+.table04 {
+        width: 100%;
+        text-align: center;
+}
+.title02 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: #333333;
+}
+.form {
+        width: 80%;
+        border: 1px solid #CCCCCC;
+
+
+}
+.title {
+        color: #FFFFFF;
+        border-top: 1px solid #CCCCCC;
+        border-bottom: 1px solid #CCCCCC;
+        background: #57533C;
+        height: 28px;
+        font: bold 15px "新細明體";
+        text-decoration: none;
+        letter-spacing: 2px;
+
+
+
+
+}
+.information {
+        width: 100%;
+        position: static;
+        border: 1px solid #CFD3C5;
+
+}
+.inforleft {
+        width: 5px;
+        background: #463333;
+}
+.inforleft3 {
+        width: 5px;
+        background: #445643;
+}
+
+.infortd {
+        font: 12px/25px "新細明體";
+        color: #333333;
+        text-decoration: none;
+        text-align: left;
+        border-bottom: 1px dotted #CCCCCC;
+        vertical-align: top;
+        padding-left: 3px;
+}
+.infortd3 {
+        font: 12px/25px "新細明體";
+        color: #333333;
+        text-decoration: none;
+        text-align: left;
+        border-bottom: 1px dotted #CCCCCC;
+        vertical-align: middle;
+        padding-left: 3px;
+        width: 75%;
+        position: relative;
+
+}
+
+.infortd2 {
+        font: 12px/25px "新細明體";
+        color: #333333;
+        vertical-align: top;
+        border-bottom: 1px dotted #CCCCCC;
+        text-align: left;
+        border-right: 1px solid #CCCCCC;
+        padding-left: 3px;
+        text-decoration: none;
+        position: relative;
+        width: 25%;
+
+
+}
+.fill {
+        font: 11px/12px "新細明體";
+        color: #333333;
+        letter-spacing: 1px;
+
+}
+.buttonfill {
+        font: 12px "新細明體";
+        color: #333333;
+        letter-spacing: 1px;
+}
+.inforleft2{
+        background: #435A65;
+        width: 5px;
+}
+.table01title01 {
+        font: 12px "新細明體";
+        color: #333333;
+        text-decoration: none;
+        background: #C9BDA7;
+        border-top: 1px solid #8B7C5F;
+        border-bottom: 1px solid #8B7C5F;
+        border-right: 1px solid #F0E4DD;
+        height: 30px;
+        text-align: center;
+        vertical-align: middle;
+        width: 20%;
+        position: relative;
+
+
+
+
+}
+.table01title02{
+        font: 12px "新細明體";
+        color: #333333;
+        text-decoration: none;
+        background: #C9BDA7;
+        border-top: 1px solid #8B7C5F;
+        border-bottom: 1px solid #8B7C5F;
+        border-right: 1px solid #F0E4DD;
+        height: 25px;
+        text-align: center;
+        vertical-align: middle;
+        width: 15%;
+        position: relative;
+
+}
+.table01title03 {
+        font: 12px "新細明體";
+        color: #333333;
+        text-decoration: none;
+        background: #C9BDA7;
+        border-top: 1px solid #8B7C5F;
+        border-bottom: 1px solid #8B7C5F;
+        border-right: 1px solid #F0E4DD;
+        height: 25px;
+        text-align: center;
+        vertical-align: middle;
+        width: 30%;
+        position: relative;
+
+}
+.table01title04 {
+        font: 12px "新細明體";
+        color: #333333;
+        text-decoration: none;
+        background: #C9BDA7;
+        border-top: 1px solid #8B7C5F;
+        border-bottom: 1px solid #8B7C5F;
+        border-right: 1px solid #F0E4DD;
+        height: 25px;
+        text-align: center;
+        vertical-align: middle;
+        width: 15%;
+        position: relative;
+
+}
+.table01title05 {
+        font: 12px "新細明體";
+        color: #333333;
+        text-decoration: none;
+        background: #C9BDA7;
+        border-top: 1px solid #8B7C5F;
+        border-bottom: 1px solid #8B7C5F;
+        border-right: 1px solid #F0E4DD;
+        height: 25px;
+        text-align: center;
+        vertical-align: middle;
+        width: 20%;
+        position: relative;
+
+}
+.table01tdtext {
+        font: 11px "新細明體";
+        color: #FFFFFF;
+}
+.table02tdtext {
+        font: 12px/20px "新細明體";
+        color: #551E1F;
+}
+.table01tdtd01{
+        font: 12px/20px "新細明體";
+        color: #1B1B1B;
+        text-decoration: none;
+        text-align: left;
+        border-bottom: 1px dotted #999999;
+        vertical-align: top;
+        padding-left: 3px;
+        height: 30px;
+        padding-top: 3px;
+        border-right: 1px solid #CCCCCC;
+
+
+}
+.table01tdtd02{
+        font: 12px/20px "新細明體";
+        color: #3A3A3A;
+        text-decoration: none;
+        text-align: left;
+        border-bottom: 1px dotted #999999;
+        vertical-align: top;
+        padding-left: 5px;
+        height: 30px;
+        background: #F4EFEC;
+        padding-top: 3px;
+        border-right: 1px solid #CCCCCC;
+
+
+
+
+}
+.table01tdtd051{
+        font: 12px/20px "新細明體";
+        color: #1B1B1B;
+        text-decoration: none;
+        text-align: left;
+        border-bottom: 1px dotted #999999;
+        vertical-align: top;
+        padding-left: 3px;
+        height: 30px;
+        padding-top: 2px;
+
+
+}
+.table01tdtd05{
+        font: 12px/20px "新細明體";
+        color: #551E1F;
+        text-decoration: none;
+        text-align: left;
+        border-bottom: 1px dotted #999999;
+        vertical-align: top;
+        padding-left: 3px;
+        height: 30px;
+        padding-top: 3px;
+
+}
+.table01tdtd011{
+        font: 12px/20px "新細明體";
+        color: #4C4C4C;
+        text-decoration: none;
+        text-align: left;
+        border-bottom: 1px dotted #999999;
+        vertical-align: top;
+        padding-left: 3px;
+        height: 30px;
+        padding-top: 3px;
+        background: #F4F3EA;
+        border-top: 1px solid #D5D0BF;
+        border-right: 1px solid #CCCCCC;
+}
+.table01tdtd012{
+        font: 12px/20px "新細明體";
+        color: #4C4C4C;
+        text-decoration: none;
+        text-align: left;
+        border-bottom: 1px dotted #999999;
+        vertical-align: top;
+        padding-left: 3px;
+        height: 30px;
+        padding-top: 3px;
+        background: #F4F3EA;
+        border-top: 1px solid #D5D0BF;
+}
+.ordertable01 {
+        width: 100%;
+}
+.tabletext {
+        font: 12px/22px "新細明體";
+        color: #FFFFFF;
+        text-decoration: none;
+}
